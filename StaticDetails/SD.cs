@@ -38,7 +38,7 @@ namespace DuendeIdentityServer.StaticDetails
             {
                 new Client
                 {
-                    ClientId = "service.client",
+                    ClientId = "cms",
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
@@ -46,10 +46,10 @@ namespace DuendeIdentityServer.StaticDetails
                 },
                 new Client
                 {
-                    ClientId = "cms",
+                    ClientId = "wajid",
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedGrantTypes = GrantTypes.Code,
                     AllowedScopes = { "cms",
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Email,
